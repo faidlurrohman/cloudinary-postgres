@@ -11,7 +11,7 @@ const connectionString = `postgresql://${process.env.DB_USER}:${process.env.DB_P
 // else connect with the local DATABASE_URL
 const pool = new pg.Pool({
   connectionString: isProduction ? process.env.DATABASE_URL : connectionString,
-  ssl: isProduction,
+  ssl: isProduction ? { rejectUnauthorized: false } : false,
 });
 
 // display message on success message if successful
