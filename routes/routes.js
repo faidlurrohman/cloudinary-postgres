@@ -7,7 +7,7 @@ const deleteImage = require("./controllers/deleteImage");
 const updateImage = require("./controllers/updateImage");
 
 router.get("/", (request, response) => {
-  response.json({ message: "Hey! This is your server response!" });
+  response.json({ eating: "HAMburger!" });
 });
 
 router.post("/upload-image", uploadImage.uploadImage);
