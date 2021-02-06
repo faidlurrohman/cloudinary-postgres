@@ -15,11 +15,11 @@ exports.allImage = (request, response) => {
 
   db.pool.connect((err, client) => {
     // query to find image
-    const query = "SELECT * FROM images";
+    const allQuery = "SELECT * FROM images";
 
     // execute query
     client
-      .query(query)
+      .query(allQuery)
       .then((output) => {
         response.status(200).send({
           status: "success",
