@@ -4,9 +4,6 @@ exports.allImage = (request, response) => {
   db.pool.connect((err, client) => {
     // query to find image
     const allQuery = "SELECT * FROM images";
-
-    console.log("err=", err);
-    console.log("client=", client);
     // execute query
     client
       .query(allQuery)
