@@ -19,22 +19,6 @@ pool.on("connect", () => {
   console.log("Teamwork Database connected successfully!");
 });
 
-//default privileges
-// const config = {
-//   user: "serv-test",
-//   database: "serv-test",
-//   password: "f4idr0hm4n",
-//   port: 5432,
-//   max: 10, // max number of clients in the pool
-//   idleTimeoutMillis: 30000,
-// };
-
-// const pool = new pg.Pool(config);
-
-// pool.on("connect", () => {
-//   console.log("connected to the Database");
-// });
-
 const createTables = () => {
   const imageTable = `CREATE TABLE IF NOT EXISTS
     images(
