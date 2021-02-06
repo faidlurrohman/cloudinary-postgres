@@ -5,6 +5,8 @@ exports.allImage = (request, response) => {
     // query to find image
     const allQuery = "SELECT * FROM images";
 
+    console.log("err=", err);
+    console.log("client=", client);
     // execute query
     client
       .query(allQuery)
